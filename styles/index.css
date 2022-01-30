@@ -1,10 +1,15 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 
 :root
 {
-    --grey: #EAEDED;
+    --lightgrey: #EAEDED;
+    --darkgrey: #7F7F7F;
+    --violet: #A280FF;
+    --darkviolet: #551A8B;
+    --cyan: #0DCFE8;
 }
 
 *
@@ -24,5 +29,340 @@ html
 
 body
 {
-    background-color: var(--grey);
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    background-color: var(--violet);
+    box-shadow: 0px 2px 2px var(--violet);
+    padding: 16px;
+}
+
+header > .logo
+{
+    color: var(--darkviolet);
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Itim', sans-serif;
+    font-size: 2em;
+    transition: all 0.5s;
+}
+
+header > .logo:hover
+{
+    color: white;
+    letter-spacing: 2px;
+}
+
+main
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+main > .home
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+}
+
+main > .home > .info
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 16px;
+}
+
+main > .home > .info > h1
+{
+    color: var(--violet);
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Itim', sans-serif;
+}
+
+main > .home > .info > p
+{
+    font-size: 1.1em;
+    text-align: center;
+}
+
+main > .home > div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main > .home > div > img
+{
+    width: 100%;
+    max-width: 420px;
+}
+
+main > .gallery
+{
+    /* Foto de Anete Lusina no Pexels */
+    background-image: url(../images/background.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--darkgrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+main > .gallery > .container
+{
+    background-color: #00000040;
+    display: flex;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    max-width: calc(100vw - 32px);
+}
+
+main > .gallery > .container > div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    scroll-snap-align: start;
+    width: 100%;
+}
+
+main > .gallery > .container > div > img
+{
+    background-color: white;
+    object-fit: cover;
+    width: 100%;
+    max-width: 320px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+main > .gallery > .container > div > h2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+main > .gallery > .container > div > p
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 0.9em;
+    width: 100%;
+    min-height: 100px;
+    max-width: 320px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+main > .gallery > .container > div > p > .link
+{
+    color: var(--darkviolet);
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    font-family: 'Itim', sans-serif;
+}
+
+main > .gallery > .rightsReserved
+{
+    background-color: #00000090;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 8px;
+}
+
+main > .gallery > .rightsReserved > .link
+{
+    color: var(--violet);
+    transition: all 0.5s;
+}
+
+main > .gallery > .rightsReserved > .link:hover
+{
+    text-decoration: underline white;
+}
+
+main > .madeBy 
+{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    gap: 16px;
+    padding: 16px;
+}
+
+main > .madeBy > div
+{
+    background-color: #00000010;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: stretch;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+main > .madeBy > div > .picture
+{
+    width: 240px;
+    height: 240px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px 4px #00000090;
+    margin: 0 auto;
+}
+
+main > .madeBy > div > .container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+main > .madeBy > div > .container > .title
+{
+    text-align: center;
+    font-size: 1.6em;
+    letter-spacing: 2px;
+    padding: 8px;
+}
+
+main > .madeBy > div > .container > .icon
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 16px;
+    padding: 8px;
+}
+
+main > .madeBy > div > .container > .icon > a
+{
+    color: var(--darkviolet);
+    font-size: 1.6em;
+    transition: all 0.5s;
+}
+
+main > .madeBy > div > .container > .icon > a:hover
+{
+    color: var(--violet);
+    transform: translateY(-8px);
+}
+
+footer
+{
+    background-color: var(--violet);
+    padding: 16px;
+}
+
+footer > .paragraph
+{
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+footer > .paragraph > .link
+{
+    color: white;
+    text-decoration: underline wavy var(--darkviolet);
+    transition: all 0.5s;
+}
+
+footer > .paragraph > .link:hover
+{
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 768px)
+{
+    main > .gallery > .container > div
+    {
+        width: calc(100%/2);
+    }
+
+    main > .madeBy > div
+    {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    main > .madeBy > div > .picture
+    {
+        height: 280px;
+        width: 280px;
+    }
+
+    main > .madeBy > div:nth-child(2n) > .container
+    {
+        order: 1;
+    }
+        
+    main > .madeBy > div:nth-child(2n) > .picture
+    {
+        order: 2;
+    }
+}
+
+@media screen and (min-width: 1080px)
+{
+    main > .gallery > .container > div
+    {
+        width: calc(100%/3);
+    }
 }
