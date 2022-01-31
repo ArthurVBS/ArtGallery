@@ -9,7 +9,6 @@
     --darkgrey: #7F7F7F;
     --violet: #A280FF;
     --darkviolet: #551A8B;
-    --cyan: #0DCFE8;
 }
 
 *
@@ -304,9 +303,112 @@ main > .madeBy > div > .container > .icon > a:hover
     transform: translateY(-8px);
 }
 
-footer
+main > .comparison
 {
     background-color: var(--violet);
+    padding: 16px;
+}
+
+main > .comparison > .container
+{
+    background-color: #00000040;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    gap: 16px;
+    padding: 16px;
+}
+
+main > .comparison > .container > .imgBox
+{
+    background-color: white;
+    position: relative;
+    width: calc(280px - 32px);
+    height: calc(224px - 32px);
+    border-radius: 10px;
+    padding: 8px;
+    border: 8px solid white;
+}
+
+main > .comparison > .container > .imgBox > textarea
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+}
+
+main > .comparison > .container > .imgBox > textarea:nth-child(2)
+{
+    min-width: 5%;
+    width: 20%;
+    max-width: 95%;
+    resize: horizontal;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: 4px solid var(--lightgrey);
+}
+
+main > .comparison > .container > .imgBox:nth-child(1) > textarea
+{
+    background-image: url(../images/comparison01.png);
+}
+
+main > .comparison > .container > .imgBox:nth-child(1) > textarea:nth-child(2)
+{
+    background-image: url(../images/comparison02.png);
+}
+
+main > .comparison > .container > .imgBox:nth-child(2) > textarea
+{
+    background-image: url(../images/comparison03.png);
+}
+
+main > .comparison > .container > .imgBox:nth-child(2) > textarea:nth-child(2)
+{
+    background-image: url(../images/comparison04.png);
+}
+
+main > .comparison > .rightsReserved
+{
+    background-color: #00000090;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 8px;
+}
+
+main > .comparison > .rightsReserved > .link
+{
+    color: var(--violet);
+    transition: all 0.5s;
+}
+
+main > .comparison > .rightsReserved > .link:hover
+{
+    text-decoration: underline white;
+}
+
+footer
+{
+    background-color: var(--darkviolet);
     padding: 16px;
 }
 
@@ -334,6 +436,12 @@ footer > .paragraph > .link:hover
     main > .gallery > .container > div
     {
         width: calc(100%/2);
+    }
+    
+    main > .comparison > .container > .imgBox
+    {
+        width: calc(350px - 32px);
+        height: calc(280px - 32px);
     }
 
     main > .madeBy > div
@@ -364,5 +472,11 @@ footer > .paragraph > .link:hover
     main > .gallery > .container > div
     {
         width: calc(100%/3);
+    }
+
+    main > .comparison > .container > .imgBox
+    {
+        width: calc(400px - 32px);
+        height: calc(320px - 32px);
     }
 }
