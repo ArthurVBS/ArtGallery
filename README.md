@@ -27,8 +27,11 @@
 
 ## 📝 Features:
 
-- [ ] Ser responsivo (CSS)
-- [ ] Usar tags semânticas (HTML)
+- [x] Ser responsivo (CSS)
+- [x] Utilizar cards (CSS)
+- [x] Usar tags semânticas (HTML)
+- [x] Carrossel de imagens (CSS)
+- [x] Comparador de imagens (CSS)
 
 ## ⚙️ Pré-requisitos:
 
