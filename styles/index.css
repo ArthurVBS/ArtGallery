@@ -115,6 +115,29 @@ main > .gallery
     padding: 16px;
 }
 
+main > .gallery > h1
+{
+    background-color: #00000090;
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 8px;
+}
+
+main > .gallery > p
+{
+    background-color: #00000040;
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+}
+
 main > .gallery > .container
 {
     background-color: #00000040;
@@ -123,8 +146,6 @@ main > .gallery > .container
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 
     max-width: calc(100vw - 32px);
 }
@@ -147,7 +168,6 @@ main > .gallery > .container > div > img
     width: 100%;
     max-width: 320px;
     padding: 16px;
-    margin-top: 16px;
 }
 
 main > .gallery > .container > div > h2
@@ -307,6 +327,29 @@ main > .comparison
     padding: 16px;
 }
 
+main > .comparison > h1
+{
+    background-color: #00000090;
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 8px;
+}
+
+main > .comparison > p
+{
+    background-color: #00000040;
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+}
+
 main > .comparison > .container
 {
     background-color: #00000040;
@@ -316,10 +359,8 @@ main > .comparison > .container
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     gap: 16px;
-    padding: 16px;
+    padding: 0px 16px 16px 16px;
 }
 
 main > .comparison > .container > .imgBox
