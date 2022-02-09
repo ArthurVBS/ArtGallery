@@ -1,10 +1,14 @@
-function comparison(element)
+function comparison(element, move)
 {
-    let range01 = window.document.getElementById("img01")
-    let range02 = window.document.getElementById("img02")
-    
-    let textarea01 = window.document.getElementById("comp01")
-    let textarea02 = window.document.getElementById("comp02")
+    let textarea01 = window.document.getElementById("textarea01")
+    let textarea02 = window.document.getElementById("textarea02")
 
-    element == 1 ? textarea01.style.width = range01.value + "%" : textarea02.style.width = range02.value + "%"
+    if (element == 1)
+    {
+        move == 'next' ? textarea01.style.width = '95%' : textarea01.style.width = '5%'
+    }
+    else
+    {
+        move == 'next' ? textarea02.style.width = '95%' : textarea02.style.width = '5%'
+    }
 }

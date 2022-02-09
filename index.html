@@ -21,6 +21,10 @@
                 <img src="images/logo.png" alt="Arte feita por Letícia Amaral">
                 <p>O dia a dia da vida de Greg e seu bichinho Tuik.</p>
             </div>
+            <div class="gif">
+                <iframe src="https://giphy.com/embed/KdmW3HVZxp81nif1qR" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <a href="https://giphy.com/stickers/desenho-desenhando-desenhei-KdmW3HVZxp81nif1qR" target="_blank" rel="external">GIPHY<i class="fas fa-link"></i></a>
+            </div>
         </section>
 
         <section class="gallery">
@@ -94,18 +98,37 @@
 
         <section class="comparison">
             <h1>Comparação de Artes</h1>
-            <p>Arraste a barra e veja a comparação!</p>
+            <p>Escolha a direção e veja a comparação!</p>
             <div class="container">
-                <div class="imgBox">
-                    <textarea readonly></textarea>
-                    <textarea readonly id="comp01"></textarea>
+                <div class="box">
+                    <div class="imgBox">
+                        <textarea readonly></textarea>
+                        <textarea readonly id="textarea01"></textarea>
+                    </div>
+                    <div class="btnBox">
+                        <button type="button" onclick="comparison(1, 'back')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button type="button" onclick="comparison(1, 'next')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="imgBox">
-                    <textarea readonly></textarea>
-                    <textarea readonly id="comp02"></textarea>
+
+                <div class="box">
+                    <div class="imgBox">
+                        <textarea readonly></textarea>
+                        <textarea readonly id="textarea02"></textarea>
+                    </div>
+                    <div class="btnBox">
+                        <button type="button" onclick="comparison(2, 'back')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button type="button" onclick="comparison(2, 'next')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
-                <input type="range" name="img01" id="img01" min="5" max="95" onclick="comparison(1)" onmousemove="comparison(1)">
-                <input type="range" name="img02" id="img02" min="5" max="95" onclick="comparison(2)" onmousemove="comparison(2)">
             </div>
             
             <p class="rightsReserved">Todos os direitos das artes reservados a <a class="link" href="https://www.instagram.com/lela_mel0/" target="_blank" rel="external">Letícia Amaral</a> criadora do <a class="link" href="https://www.instagram.com/gregtuik/" target="_blank" rel="external">GregTuik</a>.</p>

@@ -71,33 +71,60 @@ main
 main > .home
 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    gap: 16px;
     padding: 16px;
 }
 
 main > .home > .container
 {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    max-width: 360px;
 }
 
 main > .home > .container > img
 {
-    grid-column: 1;
-    grid-row: 1/3;
     width: 100%;
-    max-width: 420px;
+    max-width: 300px;
 }
 
 main > .home > .container > p
 {
-    grid-column: 1;
-    grid-row: 2/3;
     font-size: 1em;
     text-align: center;
+}
+
+main > .home > .gif
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 360px;
+    gap: 16px;
+    padding: 16px;
+}
+
+main > .home > .gif > iframe
+{
+    width: 200px;
+    height: 200px;
+}
+
+main > .home > .gif > a
+{
+    color: var(--darkviolet);
+    letter-spacing: 1px;
+    font-size: 1em;
+    font-family: 'Itim', sans-serif;
 }
 
 main > .gallery
@@ -361,19 +388,20 @@ main > .comparison > .container
     padding: 0px 16px 16px 16px;
 }
 
-main > .comparison > .container > .imgBox
+main > .comparison > .container > .box > .imgBox
 {
     background-color: white;
     position: relative;
     width: calc(280px - 32px);
     height: calc(224px - 32px);
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     padding: 8px;
     border: 8px solid white;
     margin: 0 auto;
 }
 
-main > .comparison > .container > .imgBox > textarea
+main > .comparison > .container > .box > .imgBox > textarea
 {
     position: absolute;
     top: 0;
@@ -390,7 +418,7 @@ main > .comparison > .container > .imgBox > textarea
     background-color: white;
 }
 
-main > .comparison > .container > .imgBox > textarea:nth-child(2)
+main > .comparison > .container > .box > .imgBox > textarea:nth-child(2)
 {
     min-width: 5%;
     width: 50%;
@@ -399,43 +427,57 @@ main > .comparison > .container > .imgBox > textarea:nth-child(2)
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-right: 4px solid var(--lightgrey);
-    transition: all 0.1s;
+    transition: all 1s;
 }
 
-main > .comparison > .container > .imgBox:nth-child(1) > textarea
+main > .comparison > .container > .box:nth-child(1) > .imgBox > textarea
 {
     background-image: url(../images/comparison01.png);
 }
 
-main > .comparison > .container > .imgBox:nth-child(1) > textarea:nth-child(2)
+main > .comparison > .container > .box:nth-child(1) > .imgBox > textarea:nth-child(2)
 {
     background-image: url(../images/comparison02.png);
 }
 
-main > .comparison > .container > .imgBox:nth-child(2) > textarea
+main > .comparison > .container > .box:nth-child(2) > .imgBox > textarea
 {
     background-image: url(../images/comparison03.png);
 }
 
-main > .comparison > .container > .imgBox:nth-child(2) > textarea:nth-child(2)
+main > .comparison > .container > .box:nth-child(2) > .imgBox > textarea:nth-child(2)
 {
     background-image: url(../images/comparison04.png);
 }
 
-main > .comparison > .container > input[type=range]
+main > .comparison > .container > .box > .btnBox
 {
-    width: calc(280px - 32px - 16px);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(280px - 32px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    gap: 16px;
+    padding: 8px;
     margin: 0 auto;
 }
 
-main > .comparison > .container > input[type=range]#img01
+main > .comparison > .container > .box > .btnBox > button
 {
-    grid-row: 2/3;
+    background-color: white;
+    color: var(--violet);
+    cursor: pointer;
+    font-size: 1.2em;
+    border: none;
+    padding: 4px;
+    transition: all 0.5s;
 }
 
-main > .comparison > .container > input[type=range]#img02
+main > .comparison > .container > .box > .btnBox > button:hover
 {
-    grid-row: 4/5;
+    color: var(--darkviolet);
 }
 
 main > .comparison > .rightsReserved
@@ -488,6 +530,12 @@ footer > .paragraph > .link:hover
 
 @media screen and (min-width: 768px)
 {
+    main > .home > .gif > iframe
+    {
+        width: 240px;
+        height: 240px;
+    }
+
     main > .gallery > .container > div
     {
         width: calc(100%/2);
@@ -515,21 +563,27 @@ footer > .paragraph > .link:hover
         grid-template-columns: repeat(2, 1fr);
     }
 
-    main > .comparison > .container > .imgBox
+    main > .comparison > .container > .box > .imgBox
     {
         width: calc(350px - 32px);
         height: calc(280px - 32px);
     }
     
-    main > .comparison > .container > input[type=range]#img01, main > .comparison > .container > input[type=range]#img02
+    main > .comparison > .container > .box >  .btnBox
     {
-        grid-row: 2/3;
-        width: calc(350px - 32px - 32px);
+        width: calc(350px - 32px);
+        gap: 24px;
     }
 }
 
 @media screen and (min-width: 1080px)
 {
+    main > .home > .gif > iframe
+    {
+        width: 280px;
+        height: 280px;
+    }
+
     main > .gallery > .container > div
     {
         width: calc(100%/3);
@@ -552,14 +606,15 @@ footer > .paragraph > .link:hover
         max-width: calc(280px + 80px);
     }
 
-    main > .comparison > .container > .imgBox
+    main > .comparison > .container > .box > .imgBox
     {
         width: calc(400px - 32px);
         height: calc(320px - 32px);
     }
     
-    main > .comparison > .container > input[type=range]#img01, main > .comparison > .container > input[type=range]#img02
+    main > .comparison > .container > .box > .btnBox
     {
-        width: calc(400px - 32px - 32px);
+        width: calc(400px - 32px);
+        gap: 32px;
     }
 }
