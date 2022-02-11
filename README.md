@@ -17,7 +17,7 @@
 
 ## 💻 Situação do projeto:
 
-- Projeto em andamento... 🚧🧭
+- Projeto finalizado ✔️
 
 ## 🛠 Tecnologias:
 
@@ -31,7 +31,7 @@
 - [x] Utilizar cards (CSS)
 - [x] Usar tags semânticas (HTML)
 - [x] Carrossel de imagens (CSS)
-- [x] Comparador de imagens (CSS)
+- [x] Comparador de imagens (CSS / JS)
 
 ## ⚙️ Pré-requisitos:
 
